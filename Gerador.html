@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./qryt.png" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="generator.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>QR Code | DevAT-VietNam</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Generator -->
+        <div class="generator">
+            <h1>QR Code Generator</h1>
+            <p>Paste a url or enter text to create QR code</p>
+
+            <div class="generator-form">
+                <input type="text" placeholder="Enter text or url">
+            </div>
+
+            <div class="generator-img">
+                <img src="./qryt.png" alt="qr-code">
+            </div>
+
+            <div class="generator-btn">
+                <button class="btn-link">Download <i class="fa-solid fa-download"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+    <script src="generator.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        const textBox = document.querySelector('input[type="text"]');
+        textBox.value = id;
+    </script>
+</body>
+
+</html>

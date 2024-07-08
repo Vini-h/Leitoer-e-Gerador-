@@ -1,0 +1,89 @@
+body {
+    /*Cor ou imagem do Fundo da Tela*/
+    background-image: url("https://i.pinimg.com/564x/5a/53/c1/5a53c1c95fe509363086c4e3497b9796.jpg");
+    /*Fonte da Tela*/
+    font-family: sans-serif;
+}
+
+.Form {
+    /*Tamanho lateral do formulário*/
+    width: 380px;
+    /*Posição*/
+    margin: auto;
+    /*Distância do topo*/
+    padding-top: 40px;
+}
+
+.card {
+    /*Cor Da Borda da Tela de Credenciais*/
+    box-shadow: 1px 1px 5px black;
+    /*Cor do fundo da Tela de Credenciais*/
+    background-color: rgba(255, 255, 255, 0.431);
+    /*Espaçamento*/
+    padding: 30px;
+    /*Tamanho da Borda*/
+    border-radius: 10px;
+
+}
+
+.Card_top {
+    /*Alinhamento do texto*/
+    text-align: center;
+}
+
+.Card_group {
+    /*Confuguração de Espaçamento Abaixo do 2° Input*/
+    margin-bottom: 15px;
+}
+
+.Card_group>label {
+    width: 100%;
+    /*Email e senha cor*/
+    color: black;
+    /*posição do campo*/
+    display: block;
+    /*Espaçamento do textinho*/
+    padding: 1px;
+}
+
+.Card_group>input {
+    /*formato da borda*/
+    border-radius: 5px;
+    /*linha ao redor do campo*/
+    outline: 0;
+    /*tamanho do campo*/
+    width: 100%;
+    /*altura do campo*/
+    height: 25px;
+    /*Espaçamento do textinho*/
+    padding: 5px;
+    /*Confuguração de Espaçamento Entre os Inputs*/
+    margin-bottom: 5px;
+}
+
+.Card_group>button {
+    /*Degrade= to (direção), 1ª cor, 2ª Cor*/
+    background-image: linear-gradient(to right, red, orange);
+    /*Cor do Botão*/
+    background-color: orange;
+    /*Tamanho do Botão*/
+    width: 100%;
+    /*Formato da Borda*/
+    border-radius: 30px;
+    /*Tamanho do Botão*/
+    padding: 15px;
+    /*Cor do Texto*/
+    color: white;
+    /*Tamanho da Borda*/
+    border: 0px;
+    outline: 0;
+    /*Alinhamento do texto*/
+    text-align: center;
+    /*Tamanho do texto */
+    font-size: 18px;
+}
+
+.btn button:hover {
+    /*Cor do Botão quando passar o mouse*/
+    background-image: linear-gradient(to right, green, blue);
+}

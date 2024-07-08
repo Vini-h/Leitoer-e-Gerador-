@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./qryt.png" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="generator.css">
+    <link rel="stylesheet" href="scanner.css">
+    <link rel="stylesheet" href="Busca.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Painel ADM</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Nav -->
+        <nav>
+            <button class="nav-gene active">Formulário</button>
+            <button class="nav-scan">Scanner</button>
+        </nav>
+        <!-- Generator -->
+        <div class="generator">
+            <img src="https://imagepng.org/wp-content/uploads/2017/10/quadrado-preto-2.png" alt="qr-code">
+        </div>
+
+        <!-- Scanner -->
+        <div class="scanner" style="display: none;">
+            <h1>
+                Escanear Para Receber os Dados
+                <i class="fa-solid fa-camera"></i>
+            </h1>
+
+            <form class="scanner-form">
+                <input type="file" accept="image/*" hidden>
+
+                <img src="./qryt.png" alt="qr-code">
+                <video></video>
+
+                <div class="content">
+                    <p></p>
+                </div>
+            </form>
+
+            <div class="scanner-details">
+                <form id="consulta-form">
+                    <label class="label" for="id">ID:</label>
+                    <textarea class="input" id="id" name="id" onkeyup="consultaDados()"></textarea>
+                    <label class="label" for="Remetente">Remetente:</label>
+                    <input class="busca" type="text" id="Remetente" name="Remetente">
+                    <label class="label" for="Destinatario">Destinatario:</label>
+                    <input class="busca" type="text" id="Destinatario" name="Destinatario">
+                    <label class="label" for="Turma">Turma:</label>
+                    <input class="busca" type="text" id="Turma" name="Turma">
+                    <label class="label" for="Descricao">Descricao:</label>
+                    <input class="busca" type="text" id="Descricao" name="Descricao">
+                </form>
+
+                <div class="btn">
+                    <button class="copy" type="button" onclick="consultaDados()">Consultar</button>
+                    <button class="close">Sair</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+    <script src="generator.js"></script>
+    <script src="scanner.js"></script>
+    <script src="instascan.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
